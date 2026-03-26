@@ -1,4 +1,3 @@
-# This file is to let "legacy" nix-shell command work in addition to `nix develop`
 { nixpkgs ? import <nixpkgs> {}}:
 let
   inherit (nixpkgs) pkgs;
@@ -12,6 +11,8 @@ pkgs.mkShell {
     steel-city-comic
   ] ++ (with pkgs; [
     fig2dev
+    ghostscript
+    gnuplot
     graphviz
     gv
     inkscape
